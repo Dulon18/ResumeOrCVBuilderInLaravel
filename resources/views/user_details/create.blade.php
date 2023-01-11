@@ -11,7 +11,7 @@
                     @csrf
                     <div class="col-md-6">
                         <label for="validationCustom01" class="form-label">Full Name</label>
-                        <input type="text" name="name"  class="form-control" id="validationCustom01"  required>
+                        <input type="text" name="fname"  class="form-control" id="validationCustom01"  required>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
