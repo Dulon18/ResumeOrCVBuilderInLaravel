@@ -7,7 +7,8 @@
                 <h2 class="text-center fw-bold text-white">User Details</h2>
             </div>
             <div class="card-body">
-                <form action=" " method="POST"  class="row g-3 needs-validation" novalidate>
+                <form action="{{route('user_details.store')}}" method="POST"  class="row g-3 needs-validation" novalidate>
+                    @csrf
                     <div class="col-md-6">
                         <label for="validationCustom01" class="form-label">Full Name</label>
                         <input type="text" name="name"  class="form-control" id="validationCustom01"  required>

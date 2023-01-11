@@ -25,5 +25,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //user details route start
 
 Route::get('user-details/create',[UserDetailsController::class,'create'])->name('user_details.create');
+Route::post('user-details/store',[UserDetailsController::class,'store'])->name('user_details.store');
 
 //user details route end
