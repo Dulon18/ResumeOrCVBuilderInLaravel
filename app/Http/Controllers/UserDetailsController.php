@@ -24,7 +24,7 @@ class UserDetailsController extends Controller
      */
     public function create()
     {
-        
+        return view('user_details.create');
     }
 
     /**
