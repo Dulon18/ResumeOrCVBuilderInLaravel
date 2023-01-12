@@ -2,7 +2,8 @@
 @section('content')
 <div class="container">
 <h2>Welcome To CV / Resume Builder</h2>
-<button class="btn btn-info">Build Your Resume Now</button>
+<a href="{{route('user_details.create')}}" class="btn btn-info">Build Your Resume Now</a>
+
 </div>
 
 @endsection
