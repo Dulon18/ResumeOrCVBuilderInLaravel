@@ -22,6 +22,13 @@ class UserDetailsController extends Controller
   
     public function store(Request $request)
     {
+        $request->validate([
+            'fullname'=>'required',
+            'email'=>'required|email',
+            'phone'=>'required'
+
+        ]);
+
         UserDetails::create([
             "fullname" =>$request->fname,
             "email" =>$request->email,
