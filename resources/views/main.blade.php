@@ -1,8 +1,11 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-<h2>Welcome To CV / Resume Builder</h2>
-<a href="{{route('user_details.create')}}" class="btn btn-info">Build Your Resume Now</a>
+    <h2 class="text-center">Welcome To CV / Resume Builder</h2>
+    <div class="d-grid gap-2 col-2 mx-auto">
+        <a href="{{route('user_details.create')}}" class="btn btn-info text-center">Build Your Resume Now</a>
+    </div>
+
 
 </div>
 
