@@ -7,16 +7,19 @@
                 <h2 class="text-center fw-bold text-white">Education</h2>
             </div>
             <div class="card-body">
-                <!-- @if ($errors->any())
+                <!-- error message -->
+                @if ($errors->any())
                 <div class="alert alert-danger " data-bs-dismiss="alert" aria-label="Close">
                     <ul>
                         @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
                         @endforeach
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>                   
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </ul>  
                 </div>
-                @endif -->
+                @endif
+                <!-- form start here -->
+
                 <form action="{{route('user_edu.store')}}" method="POST" class="row g-3 needs-validation" novalidate>
                     @csrf
                     <div class="col-md-3">
@@ -41,12 +44,12 @@
                     <div class="col-md-6">
                         <label for="validationCustomUsername" class="form-label">Gratudation Start Year</label>
                         <div class="input-group has-validation">
-                            <input type="text" name="g_s_year" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                            <input type="date" name="g_s_year" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label for="validationCustom03" class="form-label">Gratudation End Year</label>
-                        <input type="text" name="g_e_year" class="form-control" id="validationCustom03" required>
+                        <input type="date" name="g_e_year" class="form-control" id="validationCustom03" required>
                     </div>
 
                     <!-- High School start -->
@@ -66,11 +69,11 @@
                  
                     <div class="col-md-6">
                         <label for="validationCustom03" class="form-label">HSC Start Year</label>
-                        <input type="text" name="h_s_year" class="form-control" id="validationCustom03" required>
+                        <input type="date" name="h_s_year" class="form-control" id="validationCustom03" required>
                     </div>
                     <div class="col-md-6">
                         <label for="validationCustom03" class="form-label">HSC End Year</label>
-                        <input type="text" name="h_e_year" class="form-control" id="validationCustom03" required>
+                        <input type="date" name="h_e_year" class="form-control" id="validationCustom03" required>
                     </div>
 
                     <!-- school section -->
@@ -90,11 +93,11 @@
                    
                     <div class="col-md-6">
                         <label for="validationCustom03" class="form-label">SSC Start Year</label>
-                        <input type="text" name="s_s_year" class="form-control" id="validationCustom03" required>
+                        <input type="date" name="s_s_year" class="form-control" id="validationCustom03" required>
                     </div>
                     <div class="col-md-6">
                         <label for="validationCustom03" class="form-label">SSC End Year</label>
-                        <input type="text" name="s_e_year" class="form-control" id="validationCustom03" required>
+                        <input type="date" name="s_e_year" class="form-control" id="validationCustom03" required>
                     </div>
 
                     <div class="col-12">
