@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('education', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->string('graduation_college_name');
             $table->string('graduation_college_location');
             $table->string('graduation_field_of_study');
@@ -24,13 +25,11 @@ return new class extends Migration
             $table->string('hsc_college_name');
             $table->string('hsc_college_location');
             $table->string('hsc_field_of_study');
-            $table->string('hsc_gpa');
             $table->string('hsc_college_start_year');
             $table->string('hsc_college_end_year');
             $table->string('ssc_school_name');
             $table->string('ssc_school_location');
             $table->string('ssc_field_of_study');
-            $table->string('ssc_gpa');
             $table->string('ssc_school_start_year');
             $table->string('ssc_school_end_year');
             $table->timestamps();
