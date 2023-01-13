@@ -36,7 +36,7 @@ class UserDetailsController extends Controller
             "address" =>$request->address,
             "user_id"=>auth()->id()
         ]);
-        return redirect()->back();
+        return redirect()->route('user_education.create');
     }
 
 
