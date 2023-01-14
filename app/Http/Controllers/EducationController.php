@@ -80,9 +80,10 @@ class EducationController extends Controller
     }
 
  
-    public function edit(Education $education)
+    public function edit(Education $education,$id)
     {
-        //
+        $education=Education::find($id);
+        return view('education.edit',compact('education'));
     }
 
 
