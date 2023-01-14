@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserDetailsController;
 use App\Http\Controllers\EducationController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,7 +34,7 @@ Route::post('user-details/store',[UserDetailsController::class,'store'])->middle
 
 //user Education route start
 
-Route::get('user-edu/create',[EducationController::class,'create'])->name('user_education.create')->middleware('auth');
-Route::post('user-edu/store',[EducationController::class,'store'])->name('user_edu.store')->middleware('auth');
+Route::get('user-edu/create',[EducationController::class,'create'])->middleware('auth')->name('user_education.create');
+Route::post('user-edu/store',[EducationController::class,'store'])->middleware('auth')->name('user_edu.store');
 
 //user Education route end

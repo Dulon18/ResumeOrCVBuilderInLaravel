@@ -22,6 +22,31 @@ class EducationController extends Controller
 
     public function store(Request $request)
     {
+            $request->validate([
+                "graduation_college_name" =>'required',
+                "graduation_college_location" =>'required',
+                "graduation_field_of_study" =>'required',
+                "graduation_cgpa" =>'required',
+                "graduation_college_start_year" =>'required',
+                "graduation_college_end_year" =>'required',
+    
+                "hsc_college_name" =>'required',
+                "hsc_college_location" =>'required',
+                "hsc_field_of_study" =>'required',
+                "hsc_college_start_year" =>'required',
+                "hsc_college_end_year" =>'required',
+    
+    
+                "ssc_school_name" =>'required',
+                "ssc_school_location" =>'required',
+                "ssc_field_of_study" =>'required',
+                "ssc_school_start_year" =>'required',
+                "ssc_school_end_year" =>'required',
+            ]);
+
+
+            //dd($request);
+
             Education::create([
             "user_id"=>auth()->id(),
             "graduation_college_name" =>$request->gname,
@@ -44,7 +69,6 @@ class EducationController extends Controller
             "ssc_school_start_year" =>$request->s_s_year,
             "ssc_school_end_year" =>$request->s_e_year,
         ]);
-
         return redirect()->back();
     }
 
