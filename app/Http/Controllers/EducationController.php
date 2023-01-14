@@ -10,7 +10,9 @@ class EducationController extends Controller
 
     public function index()
     {
-        //
+        $education=auth()->user()->education;
+        //dd($education);
+        return view('education.index',compact('education'));
     }
 
  
@@ -22,28 +24,27 @@ class EducationController extends Controller
 
     public function store(Request $request)
     {
-            $request->validate([
-                "graduation_college_name" =>'required',
-                "graduation_college_location" =>'required',
-                "graduation_field_of_study" =>'required',
-                "graduation_cgpa" =>'required',
-                "graduation_college_start_year" =>'required',
-                "graduation_college_end_year" =>'required',
+            // $request->validate([
+            //     "graduation_college_name" =>'required',
+            //     "graduation_college_location" =>'required',
+            //     "graduation_field_of_study" =>'required',
+            //     "graduation_cgpa" =>'required',
+            //     "graduation_college_start_year" =>'required',
+            //     "graduation_college_end_year" =>'required',
     
-                "hsc_college_name" =>'required',
-                "hsc_college_location" =>'required',
-                "hsc_field_of_study" =>'required',
-                "hsc_college_start_year" =>'required',
-                "hsc_college_end_year" =>'required',
+            //     "hsc_college_name" =>'required',
+            //     "hsc_college_location" =>'required',
+            //     "hsc_field_of_study" =>'required',
+            //     "hsc_college_start_year" =>'required',
+            //     "hsc_college_end_year" =>'required',
     
     
-                "ssc_school_name" =>'required',
-                "ssc_school_location" =>'required',
-                "ssc_field_of_study" =>'required',
-                "ssc_school_start_year" =>'required',
-                "ssc_school_end_year" =>'required',
-            ]);
-
+            //     "ssc_school_name" =>'required',
+            //     "ssc_school_location" =>'required',
+            //     "ssc_field_of_study" =>'required',
+            //     "ssc_school_start_year" =>'required',
+            //     "ssc_school_end_year" =>'required',
+            // ]);
 
             //dd($request);
 
