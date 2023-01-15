@@ -2,46 +2,25 @@
 @section('content')
 <div class="container">
     <div class="row">
+        <div class="text-center text-white bg-primary fw-bold m-3 rounded">
+            <h1 class="m-3">Education Summary</h1>
+        </div>
         @foreach($education as $edu)
-        <div class="card">
-
+        <div class="card m-3">
             <div class="card-body">
-                <div class="card-header bg-primary">
-                    <h1 class="text-center text-white fw-bold m-2"> Education Summary </h1>
+                <h4>{{$edu->college_name}}</h4>
+                <p> {{$edu->college_location}}</p>
+                <p>{{$edu->degree}}</p>
+                <p>CGPA: {{$edu->cgpa}}</p>
+                ( {{$edu->graduation_start_year}} -
+                {{$edu->graduation_end_year}})
+                <div class="mt-3">
+                    <a href="" class="btn btn-warning fw-bold text-primary" >Edit</a>
+                    <a href="" class="btn btn-danger fw-bold">Delete</a>
                 </div>
-                <div class="m-3">
-                <h2>Degree</h2>
-               {{$edu->graduation_college_name}}   ||
-               {{$edu->graduation_college_location}}  || 
-               {{$edu->graduation_field_of_study}}  || 
-              CGPA: {{$edu->graduation_cgpa}}  || 
-               {{$edu->graduation_college_start_year}}   -
-               {{$edu->graduation_college_end_year}}   
-               </div>
 
-               <div class="m-3">
-                <h2>HSC</h2>
-               {{$edu->hsc_college_name}}   ||
-               {{$edu->hsc_college_location}}  || 
-               {{$edu->hsc_field_of_study}}  || 
-               {{$edu->hsc_college_start_year}}   -
-               {{$edu->hsc_college_end_year}}   
-               </div>
-               <div class="m-3">
-                <h2>SSC</h2>
-               {{$edu->ssc_school_name}}   ||
-               {{$edu->ssc_school_location}}  || 
-               {{$edu->ssc_field_of_study}}   ||
-               {{$edu->ssc_school_start_year}}   -
-               {{$edu->ssc_school_end_year}}   
-               </div>
-               <div class="m-3">
-               <a href="{{route('user_edu.edit'),$edu}}" class="btn btn-info">Edit</a>
-              <a href="" class="btn btn-danger">Delete</a>
-               </div>
-               
             </div>
-       
+
         </div>
         @endforeach
     </div>
