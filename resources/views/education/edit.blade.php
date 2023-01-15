@@ -23,88 +23,47 @@
                 @endif
                 <!-- form start here -->
 
-                <form action="{{route('user_edu.store')}}" method="POST" class="row g-3 needs-validation" novalidate>
+                <form action="{{route('user_edu.update',$education->id)}}" method="POST" class="row g-3 needs-validation" novalidate>
                     @csrf
-                    <div class="col-md-3">
-                        <label for="validationCustom01" class="form-label">Gratudation College Name</label>
-                        <input type="text" name="gname" class="form-control" id="validationCustom01" required>
+                    <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label">Institution Name</label>
+                        <input  type="text" name="name" class="form-control" id="validationCustom01" value="{{$education->college_name}}">
                     </div>
-                    <div class="col-md-3">
-                        <label for="validationCustom02" class="form-label">Gratudation College Location</label>
-                        <input type="text" name="g_location" class="form-control" id="validationCustom02" required>
+                    <div class="col-md-4">
+                        <label for="validationCustom02" class="form-label">Institution Location</label>
+                        <input type="text" name="location" class="form-control" id="validationCustom02" value="{{$education->college_location}}">
                       
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <label for="validationCustom02" class="form-label">Degree</label>
-                        <input type="text" name="g_feild_of_study" class="form-control" id="validationCustom02" required>
+                        <input type="text" name="degree" class="form-control" id="validationCustom02" value="{{$education->degree}}">
                       
                     </div>
-                    <div class="col-md-3">
-                        <label for="validationCustom02" class="form-label">Gratudation CGPA</label>
-                        <input type="text" name="cgpa" class="form-control" id="validationCustom02" required>
+                    <div class="col-md-6">
+                        <label for="validationCustom02" class="form-label">Major Subject</label>
+                        <input type="text" name="field_of_study" class="form-control" id="validationCustom02" value="{{$education->field_of_study}}">
+                      
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationCustom02" class="form-label"> CGPA / GPA</label>
+                        <input type="text" name="cgpa" class="form-control" id="validationCustom02" value="{{$education->cgpa}}">
                       
                     </div>
                     <div class="col-md-6">
                         <label for="validationCustomUsername" class="form-label">Gratudation Start Year</label>
                         <div class="input-group has-validation">
-                            <input type="text" name="g_s_year" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                            <input type="date" name="s_year" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" value="{{$education->graduation_start_year}}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label for="validationCustom03" class="form-label">Gratudation End Year</label>
-                        <input type="text" name="g_e_year" class="form-control" id="validationCustom03" required>
+                        <input type="date" name="e_year" class="form-control" id="validationCustom03" value="{{$education->graduation_end_year}}">
                     </div>
 
-                    <!-- High School start -->
-                    
-                    <div class="col-md-4">
-                        <label for="validationCustom03" class="form-label">HSC School Name</label>
-                        <input type="text" name="h_name" class="form-control" id="validationCustom03" required>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="validationCustom03" class="form-label">HSC School Location</label>
-                        <input type="text" name="h_location" class="form-control" id="validationCustom03" required>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="validationCustom03" class="form-label">HSC Major</label>
-                        <input type="text" name="major" class="form-control" id="validationCustom03" required>
-                    </div>
-                 
-                    <div class="col-md-6">
-                        <label for="validationCustom03" class="form-label">HSC Start Year</label>
-                        <input type="text" name="h_s_year" class="form-control" id="validationCustom03" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="validationCustom03" class="form-label">HSC End Year</label>
-                        <input type="text" name="h_e_year" class="form-control" id="validationCustom03" required>
-                    </div>
-
-                    <!-- school section -->
-
-                    <div class="col-md-4">
-                        <label for="validationCustom03" class="form-label">SSC school Name</label>
-                        <input type="text" name="sname" class="form-control" id="validationCustom03" required>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="validationCustom03" class="form-label">SSC school Location</label>
-                        <input type="text" name="s_address" class="form-control" id="validationCustom03" required>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="validationCustom03" class="form-label">SSC Major</label>
-                        <input type="text" name="s_major" class="form-control" id="validationCustom03" required>
-                    </div>
-                   
-                    <div class="col-md-6">
-                        <label for="validationCustom03" class="form-label">SSC Start Year</label>
-                        <input type="text" name="s_s_year" class="form-control" id="validationCustom03" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="validationCustom03" class="form-label">SSC End Year</label>
-                        <input type="text" name="s_e_year" class="form-control" id="validationCustom03" required>
-                    </div>
 
                     <div class="col-12">
-                        <button class="btn btn-primary" type="submit">Next</button>
+                        <button class="btn btn-primary" type="submit">Save</button>
+                        <a href="{{url('user-edu')}}" class="btn btn-danger">Back</a>
                     </div>
                 </form>
             </div>

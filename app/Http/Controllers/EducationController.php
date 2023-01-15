@@ -43,9 +43,11 @@ class EducationController extends Controller
                 's_year.required' => 'Starting Year  is required',
                 'e_year.required' => 'Ending Year  is required',
 
-            ]);
+            ]
+        );
 
         Education::create([
+
             "user_id" => auth()->id(),
             "college_name" => $request->name,
             "college_location" => $request->location,
@@ -66,9 +68,9 @@ class EducationController extends Controller
     }
 
 
-    public function edit(Education $education)
+    public function edit($id)
     {
-        //$education=Education::find($id);
+        $education=Education::find($id);
         return view('education.edit', compact('education'));
     }
 

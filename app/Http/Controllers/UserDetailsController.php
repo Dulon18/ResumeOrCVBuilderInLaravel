@@ -24,10 +24,10 @@ class UserDetailsController extends Controller
     {
 
         $request->validate([
+            
             'fname'=>'required',
             'email'=>'required|email',
             'phone'=>'required',
-     
         ]);
         
         UserDetails::create([
