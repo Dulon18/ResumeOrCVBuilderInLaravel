@@ -33,10 +33,13 @@ Route::post('user-details/store',[UserDetailsController::class,'store'])->middle
 
 
 //user Education route start
-Route::get('user-edu',[EducationController::class,'index'])->middleware('auth');
-Route::get('user-edu/create',[EducationController::class,'create'])->middleware('auth')->name('user_education.create');
-Route::post('user-edu/store',[EducationController::class,'store'])->middleware('auth')->name('user_edu.store');
-Route::put('user-edu/edit/{id}',[EducationController::class,'edit'])->middleware('auth')->name('user_edu.edit');
-Route::put('user-edu/update/{id}',[EducationController::class,'update'])->middleware('auth')->name('user_edu.update');
+// Route::get('user-edu',[EducationController::class,'index'])->middleware('auth');
+// Route::get('user-edu/create',[EducationController::class,'create'])->middleware('auth')->name('user_education.create');
+// Route::post('user-edu/store',[EducationController::class,'store'])->middleware('auth')->name('user_edu.store');
+// Route::put('user-edu/edit/{id}',[EducationController::class,'edit'])->middleware('auth')->name('user_edu.edit');
+// Route::put('user-edu/update/{id}',[EducationController::class,'update'])->middleware('auth')->name('user_edu.update');
+
+Route::resource('user-education','EducationController');
+Route::resource('education','EducationController');
 
 //user Education route end

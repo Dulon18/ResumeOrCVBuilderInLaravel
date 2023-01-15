@@ -7,7 +7,7 @@
 
             <div class="card-body">
                 <div class="card-header bg-primary">
-                    <h1 class="text-center text-white fw-bold m-2"> Education Summary</h1>
+                    <h1 class="text-center text-white fw-bold m-2"> Education Summary </h1>
                 </div>
                 <div class="m-3">
                 <h2>Degree</h2>
@@ -36,7 +36,7 @@
                {{$edu->ssc_school_end_year}}   
                </div>
                <div class="m-3">
-               <a href="{{route('user_edu.edit'),$edu->id}}" class="btn btn-info">Edit</a>
+               <a href="{{route('user_edu.edit'),$edu}}" class="btn btn-info">Edit</a>
               <a href="" class="btn btn-danger">Delete</a>
                </div>
                

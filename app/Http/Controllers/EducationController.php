@@ -24,51 +24,27 @@ class EducationController extends Controller
 
     public function store(Request $request)
     {
-            // $request->validate([
-            //     "graduation_college_name" =>'required',
-            //     "graduation_college_location" =>'required',
-            //     "graduation_field_of_study" =>'required',
-            //     "graduation_cgpa" =>'required',
-            //     "graduation_college_start_year" =>'required',
-            //     "graduation_college_end_year" =>'required',
-    
-            //     "hsc_college_name" =>'required',
-            //     "hsc_college_location" =>'required',
-            //     "hsc_field_of_study" =>'required',
-            //     "hsc_college_start_year" =>'required',
-            //     "hsc_college_end_year" =>'required',
-    
-    
-            //     "ssc_school_name" =>'required',
-            //     "ssc_school_location" =>'required',
-            //     "ssc_field_of_study" =>'required',
-            //     "ssc_school_start_year" =>'required',
-            //     "ssc_school_end_year" =>'required',
-            // ]);
+            $request->validate([
+                "college_name" =>'required',
+                "college_location" =>'required',
+                "field_of_study" =>'required',
+                "degree" =>'required',
+                "cgpa" =>'required',
+                "graduation_start_year" =>'required',
+                "graduation_end_year" =>'required',
+            ]);
 
             //dd($request);
 
             Education::create([
             "user_id"=>auth()->id(),
-            "graduation_college_name" =>$request->gname,
-            "graduation_college_location" =>$request->g_location,
-            "graduation_field_of_study" =>$request->g_feild_of_study,
-            "graduation_cgpa" =>$request->cgpa,
-            "graduation_college_start_year" =>$request->g_s_year,
-            "graduation_college_end_year" =>$request->g_e_year,
-
-            "hsc_college_name" =>$request->h_name,
-            "hsc_college_location" =>$request->h_location,
-            "hsc_field_of_study" =>$request->major,
-            "hsc_college_start_year" =>$request->h_s_year,
-            "hsc_college_end_year" =>$request->h_e_year,
-
-
-            "ssc_school_name" =>$request->sname,
-            "ssc_school_location" =>$request->s_address,
-            "ssc_field_of_study" =>$request->s_major,
-            "ssc_school_start_year" =>$request->s_s_year,
-            "ssc_school_end_year" =>$request->s_e_year,
+            "college_name" =>$request->name,
+            "college_location" =>$request->location,
+            "field_of_study" =>$request->feild_of_study,
+            "degree" =>$request->degree,
+            "cgpa" =>$request->cgpa,
+            "graduation_start_year" =>$request->s_year,
+            "graduation_end_year" =>$request->e_year,
         ]);
         return redirect()->back();
     }
@@ -80,9 +56,9 @@ class EducationController extends Controller
     }
 
  
-    public function edit(Education $education,$id)
+    public function edit(Education $education)
     {
-        $education=Education::find($id);
+        //$education=Education::find($id);
         return view('education.edit',compact('education'));
     }
 
