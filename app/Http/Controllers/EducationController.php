@@ -24,15 +24,15 @@ class EducationController extends Controller
 
     public function store(Request $request)
     {
-            $request->validate([
-                "college_name" =>'required',
-                "college_location" =>'required',
-                "field_of_study" =>'required',
-                "degree" =>'required',
-                "cgpa" =>'required',
-                "graduation_start_year" =>'required',
-                "graduation_end_year" =>'required',
-            ]);
+            // $request->validate([
+            //     "college_name" =>'required',
+            //     "college_location" =>'required',
+            //     "field_of_study" =>'required',
+            //     "degree" =>'required',
+            //     "cgpa" =>'required',
+            //     "graduation_start_year" =>'required',
+            //     "graduation_end_year" =>'required',
+            // ]);
 
             //dd($request);
 
@@ -40,8 +40,7 @@ class EducationController extends Controller
             "user_id"=>auth()->id(),
             "college_name" =>$request->name,
             "college_location" =>$request->location,
-            "field_of_study" =>$request->feild_of_study,
-            "degree" =>$request->degree,
+            "field_of_study" =>$request->field_of_study,
             "cgpa" =>$request->cgpa,
             "graduation_start_year" =>$request->s_year,
             "graduation_end_year" =>$request->e_year,

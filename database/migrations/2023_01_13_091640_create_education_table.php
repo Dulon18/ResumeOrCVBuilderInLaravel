@@ -18,11 +18,10 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('college_name');
             $table->string('college_location');
-            $table->string('degree');
             $table->string('field_of_study');
             $table->string('cgpa');
-            $table->string('graduation_start_year');
-            $table->string('graduation_end_year');
+            $table->date('graduation_start_year');
+            $table->date('graduation_end_year');
             
             $table->timestamps();
         });
