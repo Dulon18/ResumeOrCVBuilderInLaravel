@@ -22,19 +22,21 @@ class UserDetailsController extends Controller
   
     public function store(Request $request)
     {
+
         $request->validate([
-            'fullname'=>'required',
+            'fname'=>'required',
             'email'=>'required|email',
-            'phone'=>'required'
-
+            'phone'=>'required',
+     
         ]);
-
+        
         UserDetails::create([
             "fullname" =>$request->fname,
             "email" =>$request->email,
             "phone" =>$request->phone,
             "address" =>$request->address,
-            "user_id"=>auth()->id()
+            "user_id"=>auth()->id(),
+            
         ]);
         return redirect()->route('user_education.create');
     }

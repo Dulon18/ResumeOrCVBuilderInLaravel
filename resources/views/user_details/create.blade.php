@@ -25,33 +25,24 @@
                     @csrf
                     <div class="col-md-6">
                         <label for="validationCustom01" class="form-label">Full Name</label>
-                        <input type="text" name="fname" class="form-control" id="validationCustom01" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
+                        <input type="text" name="fname" class="form-control" id="validationCustom01">
+                       
                     </div>
                     <div class="col-md-6">
                         <label for="validationCustom02" class="form-label">Email</label>
-                        <input type="email" name="email" class="form-control" id="validationCustom02" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
+                        <input type="email" name="email" class="form-control" id="validationCustom02">
+                      
                     </div>
                     <div class="col-md-6">
                         <label for="validationCustomUsername" class="form-label">Phone</label>
                         <div class="input-group has-validation">
-                            <input type="text" name="phone" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                            <div class="invalid-feedback">
-                                Please Enter Your Phone Number.
-                            </div>
+                            <input type="text" name="phone" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" >
+                        
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label for="validationCustom03" class="form-label">Address</label>
-                        <input type="text" name="address" class="form-control" id="validationCustom03" required>
-                        <div class="invalid-feedback">
-                            Please provide a valid Address.
-                        </div>
+                        <input type="text" name="address" class="form-control" id="validationCustom03" >
                     </div>
 
                     <div class="col-12">

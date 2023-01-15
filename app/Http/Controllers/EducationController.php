@@ -10,12 +10,12 @@ class EducationController extends Controller
 
     public function index()
     {
-        $education=auth()->user()->education;
+        $education = auth()->user()->education;
         //dd($education);
-        return view('education.index',compact('education'));
+        return view('education.index', compact('education'));
     }
 
- 
+
     public function create()
     {
         return view('education.create');
@@ -24,27 +24,38 @@ class EducationController extends Controller
 
     public function store(Request $request)
     {
-            // $request->validate([
-            //     "college_name" =>'required',
-            //     "college_location" =>'required',
-            //     "field_of_study" =>'required',
-            //     "degree" =>'required',
-            //     "cgpa" =>'required',
-            //     "graduation_start_year" =>'required',
-            //     "graduation_end_year" =>'required',
-            // ]);
+        $request->validate(
+            [
+                'name' => 'required',
+                'location' => 'required',
+                'field_of_study' => 'required',
+                'degree' => 'required',
+                'cgpa' => 'required',
+                's_year' => 'required|date',
+                'e_year' => 'required|date|after:s_year',
+            ],
+            [
+                'name.required' => 'Institution Name is required',
+                'location.required' => 'Institution Location is required',
+                'field_of_study.required' => 'Major Subject  is required',
+                'degree.required' => 'Degree  is required',
+                'cgpa.required' => 'CGPA/GPA  is required',
+                's_year.required' => 'Starting Year  is required',
+                'e_year.required' => 'Ending Year  is required',
 
-            //dd($request);
+            ]);
 
-            Education::create([
-            "user_id"=>auth()->id(),
-            "college_name" =>$request->name,
-            "college_location" =>$request->location,
-            "field_of_study" =>$request->field_of_study,
-            "cgpa" =>$request->cgpa,
-            "graduation_start_year" =>$request->s_year,
-            "graduation_end_year" =>$request->e_year,
+        Education::create([
+            "user_id" => auth()->id(),
+            "college_name" => $request->name,
+            "college_location" => $request->location,
+            "degree" => $request->degree,
+            "field_of_study" => $request->field_of_study,
+            "cgpa" => $request->cgpa,
+            "graduation_start_year" => $request->s_year,
+            "graduation_end_year" => $request->e_year,
         ]);
+
         return redirect()->back();
     }
 
@@ -54,11 +65,11 @@ class EducationController extends Controller
         //
     }
 
- 
+
     public function edit(Education $education)
     {
         //$education=Education::find($id);
-        return view('education.edit',compact('education'));
+        return view('education.edit', compact('education'));
     }
 
 

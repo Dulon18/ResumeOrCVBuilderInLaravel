@@ -25,21 +25,26 @@
 
                 <form action="{{route('user_edu.store')}}" method="POST" class="row g-3 needs-validation" novalidate>
                     @csrf
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <label for="validationCustom01" class="form-label">Institution Name</label>
                         <input type="text" name="name" class="form-control" id="validationCustom01" required>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <label for="validationCustom02" class="form-label">Institution Location</label>
                         <input type="text" name="location" class="form-control" id="validationCustom02" required>
                       
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <label for="validationCustom02" class="form-label">Degree</label>
+                        <input type="text" name="degree" class="form-control" id="validationCustom02" required>
+                      
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationCustom02" class="form-label">Major Subject</label>
                         <input type="text" name="field_of_study" class="form-control" id="validationCustom02" required>
                       
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <label for="validationCustom02" class="form-label"> CGPA / GPA</label>
                         <input type="text" name="cgpa" class="form-control" id="validationCustom02" required>
                       
