@@ -58,7 +58,7 @@ class EducationController extends Controller
             "graduation_end_year" => $request->e_year,
         ]);
 
-        return redirect()->back();
+        return redirect()->route('user-edu.index');
     }
 
 
@@ -78,7 +78,7 @@ class EducationController extends Controller
     public function update(Request $request,  $id)
     {
         $education=Education::find($id);
-        
+
         $education->update([    
             "college_name" => $request->name,
             "college_location" => $request->location,
@@ -91,8 +91,10 @@ class EducationController extends Controller
         return redirect()->route('user-edu.index');
     }
 
-    public function destroy(Education $education)
+    public function destroy($id)
     {
-        //
+        Education::find($id)->delete();
+        return redirect()->back();
+
     }
 }

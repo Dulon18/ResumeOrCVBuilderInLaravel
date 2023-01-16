@@ -7,6 +7,20 @@
             <h1 class="m-3">Education Summary</h1>
         </div>
             <a href="{{route('user_education.create')}}" class="btn btn-outline-success m-3 fw-bold">Add More</a>
+
+            @if ($errors->any())
+                <div class="alert alert-danger " data-bs-dismiss="alert" aria-label="Close">
+                    <ul>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> 
+                        </div>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                      
+                    </ul>  
+                </div>
+                @endif
         @foreach($education as $edu)
         <div class="card m-3">
             <div class="card-body">
@@ -18,7 +32,7 @@
                 {{$edu->graduation_end_year}})
                 <div class="mt-3">
                     <a href="{{route('user_edu.edit',$edu->id)}}" class="btn btn-warning fw-bold text-primary">Edit</a>
-                    <a href="" class="btn btn-danger fw-bold">Delete</a>
+                    <a href="{{route('user_edu.destroy',$edu->id)}}" class="btn btn-danger fw-bold">Delete</a>
                 </div>
             </div>
         </div>
