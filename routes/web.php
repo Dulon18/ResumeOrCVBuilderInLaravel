@@ -42,3 +42,7 @@ Route::put('user-edu/update/{id}', [EducationController::class, 'update'])->midd
 Route::get('user-edu/delete/{id}', [EducationController::class, 'destroy'])->middleware('auth')->name('user_edu.destroy');
 
 //user Education route end
+
+// work history route start
+
+// work history route end
