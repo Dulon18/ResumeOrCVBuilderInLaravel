@@ -24,6 +24,7 @@
                 <!-- form start here -->
 
                 <form action="{{route('user_edu.update',$education->id)}}" method="POST" class="row g-3 needs-validation" novalidate>
+                    @method('put')
                     @csrf
                     <div class="col-md-4">
                         <label for="validationCustom01" class="form-label">Institution Name</label>

@@ -75,9 +75,20 @@ class EducationController extends Controller
     }
 
 
-    public function update(Request $request, Education $education)
+    public function update(Request $request,  $id)
     {
-        //
+        $education=Education::find($id);
+        
+        $education->update([    
+            "college_name" => $request->name,
+            "college_location" => $request->location,
+            "degree" => $request->degree,
+            "field_of_study" => $request->field_of_study,
+            "cgpa" => $request->cgpa,
+            "graduation_start_year" => $request->s_year,
+            "graduation_end_year" => $request->e_year,
+        ]);
+        return redirect()->route('user-edu.index');
     }
 
     public function destroy(Education $education)
