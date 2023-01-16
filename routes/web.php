@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserDetailsController;
 use App\Http\Controllers\EducationController;
+use App\Http\Controllers\WorkExperienceController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -44,5 +45,7 @@ Route::get('user-edu/delete/{id}', [EducationController::class, 'destroy'])->mid
 //user Education route end
 
 // work history route start
-
+Route::resource('work-experience','WorkExperienceController')->middleware('auth');
+Route::get('work-experience', [WorkExperienceController::class, 'index'])->middleware('auth')->name('work-experience.index');
+Route::get('work-experience/create', [WorkExperienceController::class, 'create'])->middleware('auth')->name('work-experience.create');
 // work history route end

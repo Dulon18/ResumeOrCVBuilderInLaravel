@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class WorkExperience extends Controller
+class WorkExperienceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class WorkExperience extends Controller
      */
     public function index()
     {
-        //
+        return view('experience.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class WorkExperience extends Controller
      */
     public function create()
     {
-        //
+        return view('experience.create');
     }
 
     /**
