@@ -14,9 +14,9 @@ class WorkExperienceController extends Controller
      */
     public function index()
     {
-        $experience=auth()->user()->experience;
+        $experience = auth()->user()->experience;
         //dd($experience);
-        return view('experience.index',compact('experience'));
+        return view('experience.index', compact('experience'));
     }
 
     public function create()
@@ -48,12 +48,23 @@ class WorkExperienceController extends Controller
 
     public function edit($id)
     {
-        //
+        $experience = WorkExperience::find($id);
+        return view('experience.edit', compact('experience'));
     }
 
     public function update(Request $request, $id)
     {
-        //
+        $experience = WorkExperience::find($id);
+
+        $experience->update([
+            'job_title' => $request->title,
+            'employer' => $request->employer,
+            'city' => $request->city,
+            'state' => $request->state,
+            'start_date' => $request->s_date,
+            'end_date' => $request->e_date,
+        ]);
+        return redirect()->route('work-experience.index');
     }
 
     public function destroy($id)

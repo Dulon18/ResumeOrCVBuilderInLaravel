@@ -7,7 +7,7 @@
     <div class="card">
         <div class="card-body">  
             <h4 class="fw-bold">Job Title: {{$e->job_title}}</h4>  {{$e->employer}}
-             <p> {{$e->state}} ,{{$e->city}}</p>({{$e->start_date}} -{{$e->end_date}})
+             <p> {{$e->state}} , {{$e->city}}</p>({{$e->start_date}} -{{$e->end_date}})
 
              <div class="mt-3">
                     <a href="{{route('work-experience.edit',$e->id)}}" class="btn btn-warning fw-bold text-primary btn-sm">Edit</a>

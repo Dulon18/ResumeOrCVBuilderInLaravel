@@ -58,7 +58,7 @@ class EducationController extends Controller
             "graduation_end_year" => $request->e_year,
         ]);
 
-        return redirect()->route('user-edu.index');
+        return redirect()->route('work-experience.create');
     }
 
 
