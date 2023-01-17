@@ -53,7 +53,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(WorkExperience::class);
     }
-    public function skils()
+    public function skills()
     {
         return $this->hasMany(Skill::class);
     }

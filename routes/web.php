@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserDetailsController;
 use App\Http\Controllers\EducationController;
+use App\Http\Controllers\SkillController;
 use App\Http\Controllers\WorkExperienceController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -54,3 +55,14 @@ Route::put('work-experience/update/{id}', [WorkExperienceController::class, 'upd
 Route::get('work-experience/delete/{id}', [WorkExperienceController::class, 'destroy'])->middleware('auth')->name('work-experience.destroy');
 
 // work history route end
+
+// skills route start
+
+Route::get('skills', [SkillController::class, 'index'])->middleware('auth')->name('skills.index');
+Route::get('skills/create', [SkillController::class, 'create'])->middleware('auth')->name('skills.create');
+Route::post('skills/store', [SkillController::class, 'store'])->middleware('auth')->name('skills.store');
+Route::get('skills/edit/{id}', [SkillController::class, 'edit'])->middleware('auth')->name('skills.edit');
+Route::put('skills/update/{id}', [SkillController::class, 'update'])->middleware('auth')->name('skills.update');
+Route::get('skills/delete/{id}', [SkillController::class, 'destroy'])->middleware('auth')->name('skills.destroy');
+
+// skills route start
