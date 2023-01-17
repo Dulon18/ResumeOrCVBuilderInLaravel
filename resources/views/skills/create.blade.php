@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+
 <div class="container">
     <h1>Skills</h1>
     <p class="mb-5">Tell us about your skills . We'll put your skills in the right order.</p>
@@ -15,11 +16,10 @@
 
         </div>
         <div>
-            <a href="{{route('work-experience.index')}}" class="btn btn-outline-danger">Back</a>
+            <a href="{{route('skills.index')}}" class="btn btn-outline-danger">Back</a>
             <button class="btn btn-success" type="submit">Next</button>
         </div>
 </div>
-
 </form>
 </div>
 @endsection

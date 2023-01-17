@@ -28,6 +28,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //user details route start
 
+Route::get('user-details', [UserDetailsController::class, 'index'])->middleware('auth')->name('user_details.index');
 Route::get('user-details/create', [UserDetailsController::class, 'create'])->middleware('auth')->name('user_details.create');
 Route::post('user-details/store', [UserDetailsController::class, 'store'])->middleware('auth')->name('user_details.store');
 

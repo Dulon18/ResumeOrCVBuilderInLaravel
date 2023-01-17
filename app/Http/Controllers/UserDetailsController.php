@@ -10,7 +10,9 @@ class UserDetailsController extends Controller
 
     public function index()
     {
-        //
+        $details = auth()->user()->user_details;
+        //dd($details);
+        return view('user_details.index',compact('details'));
     }
 
  
