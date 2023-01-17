@@ -69,6 +69,7 @@ class WorkExperienceController extends Controller
 
     public function destroy($id)
     {
-        //
+        WorkExperience::find($id)->delete();
+        return redirect()->back();
     }
 }
