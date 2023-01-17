@@ -14,7 +14,9 @@ class WorkExperienceController extends Controller
      */
     public function index()
     {
-        return view('experience.index');
+        $experience=auth()->user()->experience;
+        //dd($experience);
+        return view('experience.index',compact('experience'));
     }
 
     public function create()
@@ -27,7 +29,7 @@ class WorkExperienceController extends Controller
     {
 
         WorkExperience::create([
-            
+
             "user_id" => auth()->id(),
             'job_title' => $request->title,
             'employer' => $request->employer,

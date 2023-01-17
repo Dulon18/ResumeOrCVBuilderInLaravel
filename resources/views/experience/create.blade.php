@@ -35,7 +35,7 @@
                         <input type="date" name="e_date" class="form-control" id="validationCustom03" required>
                     </div>
                     <div>
-                        <a href="" class="btn btn-outline-danger">Back</a>
+                        <a href="{{route('work-experience.index')}}" class="btn btn-outline-danger">Back</a>
                         <button class="btn btn-warning" type="submit">Next</button>
                     </div>
                     </div>

@@ -49,6 +49,8 @@ Route::get('user-edu/delete/{id}', [EducationController::class, 'destroy'])->mid
 Route::get('work-experience', [WorkExperienceController::class, 'index'])->middleware('auth')->name('work-experience.index');
 Route::get('work-experience/create', [WorkExperienceController::class, 'create'])->middleware('auth')->name('work-experience.create');
 Route::post('work-experience/store', [WorkExperienceController::class, 'store'])->middleware('auth')->name('work-experience.store');
-
+Route::get('work-experience/edit/{id}', [EducationController::class, 'edit'])->middleware('auth')->name('work-experience.edit');
+Route::put('work-experience/update/{id}', [EducationController::class, 'update'])->middleware('auth')->name('work-experience.update');
+Route::get('work-experience/delete/{id}', [EducationController::class, 'destroy'])->middleware('auth')->name('work-experience.destroy');
 
 // work history route end
