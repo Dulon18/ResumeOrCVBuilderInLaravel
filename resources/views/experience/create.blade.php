@@ -2,16 +2,16 @@
 @section('content')
 <div class="container">
     <h1>Work Experience</h1>
-    <p class="mb-5">Tell us about your Job . We'll put your work history in the right order</p>
-    <form action="{{route('user_edu.store')}}" method="POST" class="row g-3 needs-validation" novalidate>
+    <p class="mb-5">Tell us about your Job . We'll put your work history in the right order.</p>
+    <form action="{{route('work-experience.store')}}" method="POST" class="row g-3 needs-validation" novalidate>
                     @csrf
                     <div class="col-md-6">
                         <label for="validationCustom01" class="form-label">Job Title</label>
                         <input type="text" name="title" class="form-control" id="validationCustom01" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="validationCustom02" class="form-label">Employeer</label>
-                        <input type="text" name="employeer" class="form-control" id="validationCustom02" required>
+                        <label for="validationCustom02" class="form-label">Employer</label>
+                        <input type="text" name="employer" class="form-control" id="validationCustom02" required>
                       
                     </div>
                     <div class="col-md-6">

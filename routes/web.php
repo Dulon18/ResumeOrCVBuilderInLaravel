@@ -45,7 +45,10 @@ Route::get('user-edu/delete/{id}', [EducationController::class, 'destroy'])->mid
 //user Education route end
 
 // work history route start
-Route::resource('work-experience','WorkExperienceController')->middleware('auth');
+
 Route::get('work-experience', [WorkExperienceController::class, 'index'])->middleware('auth')->name('work-experience.index');
 Route::get('work-experience/create', [WorkExperienceController::class, 'create'])->middleware('auth')->name('work-experience.create');
+Route::post('work-experience/store', [WorkExperienceController::class, 'store'])->middleware('auth')->name('work-experience.store');
+
+
 // work history route end
