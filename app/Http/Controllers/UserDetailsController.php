@@ -50,20 +50,29 @@ class UserDetailsController extends Controller
     }
 
 
-    public function edit(UserDetails $userDetails)
+    public function edit( $userDetails)
     {
-        //
+        $details=UserDetails::find($userDetails);
+        return view('user_details.edit',compact('details'));
     }
 
 
-    public function update(Request $request, UserDetails $userDetails)
+    public function update(Request $request, $userDetails)
     {
-        //
+        $details=UserDetails::find($userDetails);
+        $details->update([
+            "fullname" =>$request->fname,
+            "email" =>$request->email,
+            "phone" =>$request->phone,
+            "address" =>$request->address,
+        ]);
+        return redirect()->back()->with('success',' Update successfully..');
     }
 
   
-    public function destroy(UserDetails $userDetails)
+    public function destroy( $id)
     {
-        //
+        $userDetails=UserDetails::find($id)->delete();
+        return redirect()->back()->with('success',' Delete successfully..');
     }
 }

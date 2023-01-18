@@ -31,6 +31,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('user-details', [UserDetailsController::class, 'index'])->middleware('auth')->name('user_details.index');
 Route::get('user-details/create', [UserDetailsController::class, 'create'])->middleware('auth')->name('user_details.create');
 Route::post('user-details/store', [UserDetailsController::class, 'store'])->middleware('auth')->name('user_details.store');
+Route::get('user-details/edit/{id}', [UserDetailsController::class, 'edit'])->middleware('auth')->name('user_details.edit');
+Route::put('user-details/update/{id}', [UserDetailsController::class, 'update'])->middleware('auth')->name('user_details.update');
+Route::get('user-details/delete/{id}', [UserDetailsController::class, 'destroy'])->middleware('auth')->name('user_details.destroy');
 
 //user details route end
 

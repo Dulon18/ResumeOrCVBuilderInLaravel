@@ -99,6 +99,26 @@
 
                     </ol>
                 </nav>
+                @if ($errors->any())
+                <div class="alert alert-danger " data-bs-dismiss="alert" aria-label="Close">
+                    <ul>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+                @if(session()->has('success'))
+                <div class="alert alert-success">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                   <h5> {{session()->get('success')}}</h5>
+                </div>
+                @endif
             </div>
             @yield('content')
         </main>
