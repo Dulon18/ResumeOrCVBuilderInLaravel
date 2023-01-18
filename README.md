@@ -4,3 +4,5 @@
 
 <h1 align="center">Resume/CV Builder</h1>
 
+
+![cv](https://user-images.githubusercontent.com/80118217/213195533-a5b8b728-0e49-45a7-aecd-840886888039.JPG)
