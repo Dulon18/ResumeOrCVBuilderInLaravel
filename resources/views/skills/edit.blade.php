@@ -16,7 +16,7 @@
         </div>
         <div>
             <a href="{{route('skills.index')}}" class="btn btn-outline-danger">Back</a>
-            <button class="btn btn-success" type="submit">Next</button>
+            <button class="btn btn-success" type="submit">Save</button>
         </div>
 </div>
 </form>

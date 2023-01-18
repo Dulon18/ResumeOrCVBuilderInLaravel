@@ -66,7 +66,7 @@ class UserDetailsController extends Controller
             "phone" =>$request->phone,
             "address" =>$request->address,
         ]);
-        return redirect()->back()->with('success',' Update successfully..');
+        return redirect()->route('user_education.index')->with('success',' Update successfully..');
     }
 
   

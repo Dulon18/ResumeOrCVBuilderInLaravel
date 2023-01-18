@@ -45,14 +45,20 @@ class SkillController extends Controller
     }
 
 
-    public function update(Request $request, Skill $skill)
+    public function update(Request $request,$id)
     {
-        //
+       $skill=Skill::find($id);
+       $skill->update([
+        'name'=>$request->name,
+            'rating'=>$request->rating,
+       ]);
+       return redirect()->route('skills.index')->with('success',' Update successfully..');
     }
 
 
-    public function destroy(Skill $skill)
+    public function destroy( $id)
     {
-        //
+        $skill=Skill::find($id)->delete();
+        return redirect()->back()->with('success',' Delete successfully..');
     }
 }
