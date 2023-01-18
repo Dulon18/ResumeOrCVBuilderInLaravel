@@ -23,6 +23,15 @@ class SkillController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+              'name'=>'required',
+        ],[
+
+            'name.required' => 'Enter Skills Name',
+        ]
+    
+    );
+
         Skill::create([
             "user_id" => auth()->id(),
             'name'=>$request->name,

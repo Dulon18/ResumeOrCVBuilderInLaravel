@@ -38,7 +38,7 @@ class WorkExperienceController extends Controller
             'start_date' => $request->s_date,
             'end_date' => $request->e_date,
         ]);
-        return redirect()->back();
+        return redirect()->route('work-experience.index')->with('success',' Info added successfully..');
     }
 
     public function show($id)
@@ -64,12 +64,12 @@ class WorkExperienceController extends Controller
             'start_date' => $request->s_date,
             'end_date' => $request->e_date,
         ]);
-        return redirect()->route('work-experience.index');
+        return redirect()->route('work-experience.index')->with('success',' Update successfully..');
     }
 
     public function destroy($id)
     {
         WorkExperience::find($id)->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success',' Delete successfully..');
     }
 }

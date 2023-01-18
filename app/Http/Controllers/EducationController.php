@@ -58,7 +58,7 @@ class EducationController extends Controller
             "graduation_end_year" => $request->e_year,
         ]);
 
-        return redirect()->route('work-experience.create');
+        return redirect()->route('user-edu.index')->with('success',' Info added successfully..');
     }
 
 
@@ -88,13 +88,13 @@ class EducationController extends Controller
             "graduation_start_year" => $request->s_year,
             "graduation_end_year" => $request->e_year,
         ]);
-        return redirect()->route('user-edu.index');
+        return redirect()->route('user-edu.index')->with('success',' Update successfully..');
     }
 
     public function destroy($id)
     {
         Education::find($id)->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success',' Delete successfully..');
 
     }
 }

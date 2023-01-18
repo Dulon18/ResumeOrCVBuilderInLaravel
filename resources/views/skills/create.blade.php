@@ -3,7 +3,7 @@
 
 <div class="container">
     <h1>Skills</h1>
-    <p class="mb-5">Tell us about your skills . We'll put your skills in the right order.</p>
+    <p class="mb-5">Tell us about your skills which made you special. We'll put your skills in the right order.</p>
     <form action="{{route('skills.store')}}" method="POST" class="row g-3 needs-validation" novalidate>
         @csrf
         <div class="col-md-4">
@@ -17,7 +17,7 @@
         </div>
         <div>
             <a href="{{route('skills.index')}}" class="btn btn-outline-danger">Back</a>
-            <button class="btn btn-success" type="submit">Next</button>
+            <button class="btn btn-success" type="submit">Submit</button>
         </div>
 </div>
 </form>

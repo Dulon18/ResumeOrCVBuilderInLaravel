@@ -36,7 +36,7 @@
                     </div>
                     <div>
                         <a href="{{route('work-experience.index')}}" class="btn btn-outline-danger">Back</a>
-                        <button class="btn btn-warning" type="submit">Next</button>
+                        <button class="btn btn-warning" type="submit">Submit</button>
                     </div>
                     </div>
                     

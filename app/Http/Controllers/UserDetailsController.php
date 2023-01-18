@@ -40,7 +40,7 @@ class UserDetailsController extends Controller
             "user_id"=>auth()->id(),
             
         ]);
-        return redirect()->route('user_education.create');
+        return redirect()->route('user_education.index')->with('success',' Info added successfully..');
     }
 
 
