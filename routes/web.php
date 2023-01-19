@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserDetailsController;
 use App\Http\Controllers\EducationController;
+use App\Http\Controllers\ResumeController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\WorkExperienceController;
 use Illuminate\Support\Facades\Auth;
@@ -70,3 +71,6 @@ Route::put('skills/update/{id}', [SkillController::class, 'update'])->middleware
 Route::get('skills/delete/{id}', [SkillController::class, 'destroy'])->middleware('auth')->name('skills.destroy');
 
 // skills route start
+
+//Resume route
+Route::get('resume',[ResumeController::class,'index'])->middleware('auth')->name('resume.index');

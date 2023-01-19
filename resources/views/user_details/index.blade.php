@@ -10,7 +10,7 @@
             <h4 class="fw-bold">
                 {{$d->fullname}}
             </h4>
-            <p>Email : {{$d->email}} | Phone: {{$d->phone}} | Addres: {{$d->address}}</p>
+            <p>Email : {{$d->email}} | Phone: {{$d->phone}} | Address: {{$d->address}}</p>
             <h4 class="fw-bold">Summary / Objective : </h4>
             <p>{{$d->objective}}</p>
             <div class="mt-3">
