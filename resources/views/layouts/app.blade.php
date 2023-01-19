@@ -92,6 +92,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb m-3">
                         <li class="breadcrumb-item nav-link m-3 {{request()->is('/') ? 'active': ' '}}"><a class="nav-link d-flex" href="{{url('/')}}">Home</a></li>
+                        <li class="breadcrumb-item nav-link m-3 {{request()->is('/') ? 'active': ' '}}"><a class="nav-link d-flex" href="{{url('/')}}">Header</a></li>
                         <li class="breadcrumb-item m-3 {{request()->is('user-details') ? 'active': ' '}}"><a class="nav-link d-flex" href="{{route('user_details.index')}}">User Info</a></li>
                         <li class="breadcrumb-item m-3 {{request()->is('user-edu') ? 'active': ' '}}"><a class="nav-link d-flex" href="{{route('user-edu.index')}}">Education</a></li>
                         <li class="breadcrumb-item m-3 {{request()->is('work-experience') ? 'active': ' '}} "><a class="nav-link d-flex" href="{{route('work-experience.index')}}">Work Experience</a></li>

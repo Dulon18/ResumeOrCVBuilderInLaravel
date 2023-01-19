@@ -25,9 +25,14 @@
             <label for="validationCustom03" class="form-label">Address</label>
             <input type="text" name="address" class="form-control" id="validationCustom03">
         </div>
-
+        <div class="col-md-12">
+            <label for="validationCustom03" class="form-label">Objective / Summary</label>
+            <div class="form-floating">
+                <textarea class="form-control" name="objective"  id="floatingTextarea2" style="height: 100px"></textarea>
+            </div>
+        </div>
         <div class="col-12">
-        <a href="{{route('user_details.index')}}" class="btn btn-outline-danger">Back</a>
+            <a href="{{route('user_details.index')}}" class="btn btn-outline-danger">Back</a>
             <button class="btn btn-primary" type="submit">Submit</button>
         </div>
     </form>

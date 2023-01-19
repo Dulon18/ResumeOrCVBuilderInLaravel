@@ -11,6 +11,8 @@
                 {{$d->fullname}}
             </h4>
             <p>Email : {{$d->email}} | Phone: {{$d->phone}} | Addres: {{$d->address}}</p>
+            <h4>Summary / Objective : </h4>
+            <p>{{$d->objective}}</p>
             <div class="mt-3">
                 <a href="{{route('user_details.edit',$d->id)}}" class="btn btn-warning fw-bold text-primary btn-sm">Edit</a>
                 <a href="{{route('user_details.destroy',$d->id)}}" class="btn btn-danger fw-bold btn-sm">Delete</a>

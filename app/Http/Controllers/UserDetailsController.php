@@ -30,6 +30,7 @@ class UserDetailsController extends Controller
             'fname'=>'required',
             'email'=>'required|email',
             'phone'=>'required',
+            'objective'=>'required',
         ]);
         
         UserDetails::create([
@@ -37,6 +38,7 @@ class UserDetailsController extends Controller
             "email" =>$request->email,
             "phone" =>$request->phone,
             "address" =>$request->address,
+            "objective" =>$request->objective,
             "user_id"=>auth()->id(),
             
         ]);
@@ -46,7 +48,7 @@ class UserDetailsController extends Controller
 
     public function show(UserDetails $userDetails)
     {
-        //
+        //objective
     }
 
 
@@ -65,8 +67,9 @@ class UserDetailsController extends Controller
             "email" =>$request->email,
             "phone" =>$request->phone,
             "address" =>$request->address,
+            "objective" =>$request->objective,
         ]);
-        return redirect()->route('user_education.index')->with('success',' Update successfully..');
+        return redirect()->route('user_details.index')->with('success',' Update successfully..');
     }
 
   
