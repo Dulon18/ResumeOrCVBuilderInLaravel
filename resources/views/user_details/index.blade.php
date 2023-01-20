@@ -7,9 +7,7 @@
     @foreach($details as $d)
     <div class="card mt-3">
         <div class="card-body">
-            <h4 class="fw-bold">
-                {{$d->fullname}}
-            </h4>
+            <h4 class="fw-bold"> {{$d->fullname}}</h4>
             <p>Email : {{$d->email}} | Phone: {{$d->phone}} | Address: {{$d->address}}</p>
             <h4 class="fw-bold">Summary / Objective : </h4>
             <p>{{$d->objective}}</p>
