@@ -24,7 +24,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                <a href="{{route('resume.download')}}" type="button" class="btn btn-primary">Download</a>
+                <a href="{{route('resume.download')}}" type="button" class="btn btn-primary"><i class="fa fa-download"></i> Download</a>
             </div>
         </div>
     </div>
