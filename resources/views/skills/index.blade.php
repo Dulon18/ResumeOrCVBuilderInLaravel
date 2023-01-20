@@ -18,7 +18,7 @@
         </div>
         @endforeach
         <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
-        <a href="" class="btn btn-outline-primary me-md-2 ">Next Section <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="{{url('/')}}" class="btn btn-outline-primary me-md-2 "> <i class="fa-solid fa-eye px-1"> Preview </i></a>
     </div>
 </div>
 @endsection

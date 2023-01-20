@@ -1,10 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
-
+use Illuminate\Http\Request;
 
 class ResumeController extends Controller
 {
@@ -15,10 +13,10 @@ class ResumeController extends Controller
         return view('resume.index',compact('resume'));
     }
 
-    // public function download()
-    // {
-    //     $resume=auth()->user();
-    //     $pdf = Pdf::loadView('resume.index', $resume);
-    //     return $pdf->download('resume.pdf');
-    // }
+    public function download()
+    {
+        $resume=auth()->user();
+        $pdf = Pdf::loadView('resume.index', compact('resume'));       
+        return $pdf->download('resume.pdf');
+    }
 }

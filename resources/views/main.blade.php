@@ -4,7 +4,7 @@
     <h2 class="text-center p-5">Welcome To CV / Resume Builder</h2>
     <div class="d-grid gap-2 col-3 mx-auto d-flex">
         <a href="{{route('user_details.create')}}" class="btn btn-primary text-center">Build Your Resume Now</a>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-outline-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">
         <i class="fa-solid fa-eye px-1"></i> Preview
         </button>
     </div>
@@ -24,7 +24,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Dowmload</button>
+                <a href="{{route('resume.download')}}" type="button" class="btn btn-primary">Download</a>
             </div>
         </div>
     </div>

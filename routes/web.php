@@ -74,3 +74,4 @@ Route::get('skills/delete/{id}', [SkillController::class, 'destroy'])->middlewar
 
 //Resume route
 Route::get('resume',[ResumeController::class,'index'])->middleware('auth')->name('resume.index');
+Route::get('resume/download',[ResumeController::class,'download'])->middleware('auth')->name('resume.download');
