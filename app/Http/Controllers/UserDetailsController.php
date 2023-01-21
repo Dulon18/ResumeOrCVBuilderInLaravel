@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class UserDetailsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    } 
 
     public function index()
     {
@@ -41,7 +45,7 @@ class UserDetailsController extends Controller
             "user_id"=>auth()->id(),
             
         ]);
-        return redirect()->route('user_education.index')->with('success',' Info added successfully..');
+        return redirect()->route('user_details.index')->with('success',' Info added successfully..');
     }
 
 

@@ -29,6 +29,7 @@
             <p>Address: {{$resume->user_details->address}}</p>
         </section>
         <hr>
+        
         <section class="summary">
             <h3 class="fw-bold">Objective / Summary</h3>
             <p>{{$resume->user_details->objective}}</p>
@@ -45,6 +46,7 @@
             @endforeach
         </section>
         <hr>
+
         <section class="work_experience">
             <h2 class="fw-bold">Work Experience</h2>
             @foreach($resume->experience as $e)
