@@ -11,6 +11,7 @@
 - Run 'php artisan migrate'
 - Run 'php artisan serve'
 
+## Output
 
 ![cv2](https://user-images.githubusercontent.com/80118217/213845751-840965c9-2ced-493a-9950-ea7a069a072a.JPG)
 
