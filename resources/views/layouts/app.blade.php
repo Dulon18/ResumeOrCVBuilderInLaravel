@@ -96,7 +96,7 @@
                         <li class="breadcrumb-item m-3 {{request()->is('user-edu') ? 'active': ' '}}"><a class="nav-link d-flex" href="{{route('user-edu.index')}}">Education</a></li>
                         <li class="breadcrumb-item m-3 {{request()->is('work-experience') ? 'active': ' '}} "><a class="nav-link d-flex" href="{{route('work-experience.index')}}">Work Experience</a></li>
                         <li class="breadcrumb-item m-3 {{request()->is('skills') ? 'active': ' '}}"><a class="nav-link d-flex" href="{{route('skills.index')}}">Skills</a></li>
-
+                        <li class=" m-3 {{request()->is('resume') ? 'active': ' '}}"><a class="nav-link " href="{{route('resume.index')}}"><i class="fa-solid fa-eye "></i></a></li>
                     </ol>
                 </nav>
                 @if ($errors->any())
@@ -116,7 +116,7 @@
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-                   <h5> {{session()->get('success')}}</h5>
+                    <h5> {{session()->get('success')}}</h5>
                 </div>
                 @endif
             </div>

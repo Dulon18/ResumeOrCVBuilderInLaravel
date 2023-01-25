@@ -62,8 +62,10 @@
             {{$key+1}}. {{$e->name}} ({{$e->rating}} out of 10)<br>
             @endforeach
         </section>
+        
     </div>
-
+    <!-- <a href="{{url('/')}}" class="btn btn-outline-danger mt-3">Back</a>
+        <a href="{{route('resume.download')}}" type="button" class="btn btn-primary"><i class="fa fa-download"></i> Download</a>  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 
