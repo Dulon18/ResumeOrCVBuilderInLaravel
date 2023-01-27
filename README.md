@@ -13,7 +13,7 @@
 
 ## Output
 
-![cv2](https://user-images.githubusercontent.com/80118217/213845751-840965c9-2ced-493a-9950-ea7a069a072a.JPG)
+<!-- ![cv2](https://user-images.githubusercontent.com/80118217/213845751-840965c9-2ced-493a-9950-ea7a069a072a.JPG)
 
 ## After Login
 
@@ -29,7 +29,7 @@
 ![cv5](https://user-images.githubusercontent.com/80118217/213915200-9ce2382c-4298-4997-b649-3f14f2844de0.JPG)
 
 
-![cv6](https://user-images.githubusercontent.com/80118217/215152920-5b31e92d-527f-4ed3-8b6c-738adb235e34.JPG)
+![cv6](https://user-images.githubusercontent.com/80118217/215152920-5b31e92d-527f-4ed3-8b6c-738adb235e34.JPG) -->
 
 
 ## Preview section
