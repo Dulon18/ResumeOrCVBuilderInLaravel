@@ -11,6 +11,9 @@
 - npm install
 - npm run build
 
+## PDF package
+- composer require barryvdh/laravel-dompdf
+
 ## Installation Instructions
 - Clone the repo.
 - Run 'composer install'
