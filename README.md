@@ -4,6 +4,13 @@
 
 <h1 align="center">Resume/CV Builder</h1>
 
+## Auth installation Process
+
+- composer require laravel/ui
+- php artisan ui bootstrap --auth
+- npm install
+- npm run build
+
 ## Installation Instructions
 - Clone the repo.
 - Run 'composer install'
